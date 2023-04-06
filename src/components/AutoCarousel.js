@@ -20,11 +20,10 @@ const AutoCarousel = ({ images, titles, descriptions }) => {
   const handleNext = () => {
     setIndex((prevIndex) => (prevIndex + 3) % images.length);
   };
-
   return (
     <div className="carousel d-flex h-100 flex-row flex-wrap justify-content-evenly max  m-auto p-5">
       {images.slice(index, index + 3).map((image, i) => (
-        <div className="card w-auto" key={i}>
+        <div className="card " key={i}>
           <img src={image} alt="slide" />
           <div className="card-content bg-dark text-white">
             <h3>{titles[i + index]}</h3>

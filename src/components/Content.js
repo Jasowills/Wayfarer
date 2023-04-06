@@ -19,9 +19,7 @@ function Content() {
 	 
     const menuBar = document.querySelector("#bar");
     const sidebar = document.getElementById("sidebar");
-    const searchButton = document.querySelector('#content nav form .form-input button');
-    const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
-    const searchForm = document.querySelector('#content nav form');
+    
 		window.addEventListener('resize', function() {
   if (this.innerWidth <=1200) {
     console.log('hey1')
@@ -35,17 +33,7 @@ function Content() {
     const handleClick = () => {
       sidebar.classList.toggle("hide");
 	};
-    const handleSearchClick = (e) => {
-      if (window.innerWidth < 576) {
-        e.preventDefault();
-        searchForm.classList.toggle('show');
-        if (searchForm.classList.contains('show')) {
-          searchButtonIcon.classList.replace('bx-search', 'bx-x');
-        } else {
-          searchButtonIcon.classList.replace('bx-x', 'bx-search');
-        }
-      }
-	};
+   
 	  const switchMode = document.getElementById('switch-mode');
    
     switchMode.addEventListener('change', function () {
@@ -59,11 +47,9 @@ function Content() {
 	  
 
     menuBar.addEventListener("click", handleClick);
-    searchButton.addEventListener("click", handleSearchClick);
 
     return () => {
       menuBar.removeEventListener("click", handleClick);
-      searchButton.removeEventListener("click", handleSearchClick);
     };
   }, []);
     return (

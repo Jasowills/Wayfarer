@@ -78,7 +78,8 @@ const HandleSubmit = event => {
     <form onSubmit={HandleSubmit} className="glassy-form">
       <h3>Book A Trip</h3>
       <div className='flexdrive'>
-        <label>
+        <div className='radio-adjust'>
+           <label>
           <input
             type="radio"
             value="single"
@@ -87,11 +88,7 @@ const HandleSubmit = event => {
           />
           Single trip
               </label>
-              &nbsp;
-              &nbsp;
-              &nbsp;
-              &nbsp;
-              &nbsp;
+           
 
         <label>
           <input
@@ -104,6 +101,8 @@ const HandleSubmit = event => {
           />
           Return trip
         </label>
+        </div>
+       
           </div>
           <div className='flexdrive'>
                 <div>

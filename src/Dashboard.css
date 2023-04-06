@@ -412,6 +412,7 @@ background-color: #ff5722 !important;
     display: block;
     min-width: 50px;
     height: 25px;
+    
     border-radius: 25px;
     background: var(--grey);
     cursor: pointer;
@@ -457,14 +458,15 @@ background-color: #ff5722 !important;
     flex-wrap: wrap;
 }
 #bar{
-    padding-right: 8rem;
+    padding-right: 5rem;
+    padding-left: 2rem;
     font-size: 20px;
     cursor: pointer;
 }
 @media screen and (max-width: 900px) {
     #bar{
         
-        padding-right: 1rem;
+        padding-right: 3rem;
     }
 }
 #content main .head-title .left h1 {
@@ -793,7 +795,7 @@ p{
     box-shadow: 2px 2px 0 var(--light);
     cursor: pointer;
     color: var(--dark);
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 .green{
     color: lime;
@@ -821,10 +823,14 @@ p{
         padding: 1rem;
         height: 100vh;
     }
+    
     .box{
         width: 100%;
-        height: 30%;
+        height: 29%;
     }
+        #content main .table-data .head h3{
+            font-size: 18px;
+        }
 }
 .ticket {
     font-family: Arial, sans-serif;
@@ -1017,6 +1023,13 @@ p{
         display: flex;
         flex-direction: row;
     }
+   
+    .radio-adjust{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 }
 
 
@@ -1127,10 +1140,56 @@ p{
     margin-top: 5px;
     border: 1px solid var(--dark);
 }
+.extra {
+    background-color: var(--light);
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+
+
+.nothing div {
+    width: 100%;
+}
+
+.nothing div label {
+    padding: 2rem;
+}
+
+.border {
+    width: 10px;
+    height: 30px;
+    margin-left: -6px;
+    background-color: rgb(0, 163, 0);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: none !important;
+}
 @media screen and  (max-width: 800px){
   .box-flex{
     display: flex;
     flex-direction: column;
+  }
+  .details {
+        font-size: 13px;
+  }
+  .camera{
+    display: none;
+  }
+
+  .holder {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+  .extra{
+    font-size: 11px !important;
+  }
+
+  .profile-img {
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      display: flex;
   }
   .lefter{
     font-size: 24px;
@@ -1139,26 +1198,4 @@ p{
     display: flex;
     flex-direction: column;
   }
-}
-.extra{
-    background-color: var(--light);
-    padding: 0.5rem;
-    border-radius: 3px;
-}
-
-
-.nothing div{
-  width: 100%;
-}
-.nothing div label{
-    padding: 2rem;
-}
-.border{
-    width: 10px;
-    height: 30px;
-    margin-left: -6px;
-    background-color: rgb(0, 163, 0);
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-        border: none !important;
 }

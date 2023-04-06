@@ -31,7 +31,6 @@ function TripStatus() {
   }, [userId]);
 
   const recentBookings = bookings.slice(-6).reverse();
-
   return (
     <div className="todo">  
       <div className="head">

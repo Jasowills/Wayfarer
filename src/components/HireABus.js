@@ -28,12 +28,7 @@ const HireABus = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handleSearchClick = (e) => {
-        if (window.innerWidth < 576) {
-            e.preventDefault();
-            setShowSearch(!showSearch);
-        }
-    }
+   
    
     const handleLogoutClick = () => {
         // handle logout logic here
@@ -59,17 +54,7 @@ const HireABus = () => {
     const handleClick = () => {
       sidebar.classList.toggle("hide");
 	};
-    const handleSearchClick = (e) => {
-      if (window.innerWidth < 576) {
-        e.preventDefault();
-        searchForm.classList.toggle('show');
-        if (searchForm.classList.contains('show')) {
-          searchButtonIcon.classList.replace('bx-search', 'bx-x');
-        } else {
-          searchButtonIcon.classList.replace('bx-x', 'bx-search');
-        }
-      }
-	};
+    
 	  const switchMode = document.getElementById('switch-mode');
    
     switchMode.addEventListener('change', function () {
@@ -83,11 +68,9 @@ const HireABus = () => {
 	  
 
     menuBar.addEventListener("click", handleClick);
-    searchButton.addEventListener("click", handleSearchClick);
 
     return () => {
       menuBar.removeEventListener("click", handleClick);
-      searchButton.removeEventListener("click", handleSearchClick);
     };
   }, []);
     return (
@@ -99,7 +82,7 @@ const HireABus = () => {
             </Link>
             <ul className="side-menu top">
                 <li >
-                    <Link to="/dashboard" onClick={handleSearchClick}>
+                    <Link to="/dashboard">
                           &nbsp;
                         &nbsp;
                         <AiOutlineDashboard />
@@ -147,12 +130,7 @@ const HireABus = () => {
                     <Logout onClick={handleLogoutClick}/>
                 </li>
             </ul>
-            {showSearch && (
-                <form>
-                    <input type="text" placeholder="Search..."/>
-                    <button type="submit">Search</button>
-                </form>
-                )} </section>
+            </section>
             <section id="content">
 		<nav>
 			&nbsp;

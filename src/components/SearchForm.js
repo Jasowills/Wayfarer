@@ -1,13 +1,12 @@
 import React from "react";
 import "../Dashboard.css"
 function SearchForm() {
-  const handleSearchClick = () => {
-  };
+ 
 
   return (
-    <form action="#">
+    <form >
       <div className="form-input remove">
-        <input type="search" placeholder="Search..." onClick={handleSearchClick} />
+        <input type="search" placeholder="Search..."  />
         <button type="submit" className="search-btn">
           <i className="fa fa-search"></i>
         </button>

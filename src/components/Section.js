@@ -20,12 +20,7 @@ function Section() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handleSearchClick = (e) => {
-        if (window.innerWidth < 576) {
-            e.preventDefault();
-            setShowSearch(!showSearch);
-        }
-    }
+   
    
     const handleLogoutClick = () => {
         // handle logout logic here
@@ -34,13 +29,13 @@ function Section() {
 
     return (
         <section id="sidebar">
-            <Link to="/" className="brand">
+            <Link to="/dashboard" className="brand">
                 <img src={logo} className="logo"/>
                 <div className="pair">Wayfarer</div>
             </Link>
             <ul className="side-menu top">
                 <li className="active">
-                    <Link to="/dashboard" onClick={handleSearchClick}>
+                    <Link to="/dashboard" >
                           &nbsp;
                         &nbsp;
                         <AiOutlineDashboard />
@@ -93,12 +88,7 @@ function Section() {
                     <Logout onClick={handleLogoutClick}/>
                 </li>
             </ul>
-            {showSearch && (
-                <form>
-                    <input type="text" placeholder="Search..."/>
-                    <button type="submit">Search</button>
-                </form>
-            )}
+            
         </section>
     )
 }

@@ -6,7 +6,6 @@ html{
   height: 100%;
 }
 body {
-  
   /* margin: 0; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -179,15 +178,17 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 90%;
+  width: 100%;
   height: 350px;
   position: relative;
+  border: 1px solid red;
 }
 
 .card {
   width: 100%;
   height: 100%;
   margin: 0 10px;
+  margin-bottom: 30px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -198,8 +199,7 @@ body {
   text-align: center;
   float: left;
 }
-.card-content{
-}
+
 .card img {
   width: 100%;
   height: 70%;
@@ -596,6 +596,10 @@ h3 {
   .sidebar.open {
     transform: translateX(0);
   }
+    .card {
+      width: 100%;
+      border: 8px solid green;
+    }
 }
 
 #header {
