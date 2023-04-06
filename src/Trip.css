@@ -1,0 +1,54 @@
+.trip{
+    background-color: var(--light);
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.trip div {
+    padding: 1rem;
+}
+.trip div label{
+    width: 100%;
+    color: var(--dark);
+}
+.trip div  input{
+    border: 1px solid lightgrey;
+        border-radius: 5px;
+        padding: 10px;
+        margin-left: 5px;
+        font-size: 16px;
+        outline: none;
+        color: black;
+        width: 100%;
+        box-sizing: border-box;
+    
+}
+.trip button{
+    background-color: #007bff;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+        color: white;
+}
+.shift{
+ padding-left: 3rem;
+ color: var(--dark);
+}
+.center{
+    margin: auto;
+    color: var(--dark);
+}
+@media screen and (max-width: 800px){
+    .trip{
+        width: 100%;
+        padding: 1rem;
+    }
+}
