@@ -466,7 +466,7 @@ background-color: #ff5722 !important;
 @media screen and (max-width: 900px) {
     #bar{
         
-        padding-right: 3rem;
+        padding-right: 2rem;
     }
 }
 #content main .head-title .left h1 {
