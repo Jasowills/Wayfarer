@@ -21,7 +21,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailRegex = /^[^\s@']+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(loginData.email)) {
       cogoToast.error("Please enter a valid email address.");
       return;

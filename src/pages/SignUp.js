@@ -29,8 +29,8 @@ const SignUp = () => {
 
   event.preventDefault();
     setLoading(true);
-  const nameRegex = /^[a-zA-Z]+$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const nameRegex = /^[a-zA-Z'\\]+$/;
+const emailRegex = /^[^\s@']+@[^\s@]+\.[^\s@]+$/;
 
   if (!nameRegex.test(signupData.firstName) || !nameRegex.test(signupData.lastName)) {
     cogoToast.error("First name and last name must contain only letters.");
