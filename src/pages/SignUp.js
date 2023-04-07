@@ -34,18 +34,20 @@ const emailRegex = /^[^\s@']+@[^\s@]+\.[^\s@]+$/;
 
   if (!nameRegex.test(signupData.firstName) || !nameRegex.test(signupData.lastName)) {
     cogoToast.error("First name and last name must contain only letters.");
-
+     setLoading(false)
     return;
   }
 
   if (!emailRegex.test(signupData.email)) {
     cogoToast.error("Please enter a valid email address.");
- 
+      setLoading(false)
+
     return;
   }
 
   if (signupData.password !== signupData.confirmPassword) {
     cogoToast.error("Passwords do not match.");
+          setLoading(false)
 
     return;
   }
